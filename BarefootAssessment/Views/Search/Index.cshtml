@@ -1,0 +1,10 @@
+﻿@model IEnumerable<BarefootAssessment.Models.User>
+<h1>Search</h1>
+
+@if (ViewData["Terms"] != null && !string.IsNullOrEmpty(ViewData["Terms"].ToString()))
+{
+    @Html.Partial("_Results")
+    <hr />
+}
+
+@Html.Partial("_Form")

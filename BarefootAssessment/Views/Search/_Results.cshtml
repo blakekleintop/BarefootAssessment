@@ -1,0 +1,26 @@
+﻿@model IEnumerable<BarefootAssessment.Models.User>
+
+@{
+    if (Model.Any())
+    {
+        <p>
+            Each of the following user's names match your search query, <em style="color:red;">@ViewData["Terms"]</em>.
+        </p>
+        <ul>
+            @foreach (var user in Model)
+            {
+                <li>
+                    @user.Name
+                </li>
+            }
+        </ul>
+
+    }
+    else
+    {
+        <p>Unfortunately, none of our user's names contain  <em style="color:red;">@ViewData["Terms"]</em>. Please try searching again.</p>
+    }
+}
+
+
+</ul>

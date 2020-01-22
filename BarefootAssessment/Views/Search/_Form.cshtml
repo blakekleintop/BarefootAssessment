@@ -1,0 +1,9 @@
+﻿<form asp-controller="Search" asp-action="Index" method="get">
+    <div class="form-group">
+        <label for="Terms">Enter your desired search terms:</label>
+        <input type="text" class="form-control" name="Terms" aria-describedby="searchHelp" placeholder="@ViewData["Terms"]">
+        <small id="searchHelp" class="form-text text-muted">Your search results will be <em>case-insensitive</em>.</small>
+        <input type="submit" class="btn btn-outline-secondary" value="Search" />
+    </div>
+</form>
+
